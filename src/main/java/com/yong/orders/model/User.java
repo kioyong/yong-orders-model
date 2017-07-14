@@ -3,6 +3,8 @@ package com.yong.orders.model;
 import com.yong.orders.model.base.BaseEntity;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
+
 /**
  * Created by yong.a.liang on 6/20/2017.
  */
@@ -13,6 +15,7 @@ public class User extends BaseEntity{
     private String name;
     private int age;
     private Address address;
+    private List<DepartmentGroup> departmentGroupList;
 
     public String getName() {
         return name;
@@ -44,5 +47,24 @@ public class User extends BaseEntity{
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public List<DepartmentGroup> getDepartmentGroup() {
+        return departmentGroupList;
+    }
+
+    public void setDepartmentGroup(List<DepartmentGroup> departmentGroup) {
+        this.departmentGroupList = departmentGroup;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                ", departmentGroup=" + departmentGroupList +
+                '}';
     }
 }
