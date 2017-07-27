@@ -12,7 +12,9 @@ target/
 ### IntelliJ IDEA ###
 .idea
 *.iws
+**.iml
 *.iml
+yong-orders-model.iml
 *.ipr
 
 ### NetBeans ###

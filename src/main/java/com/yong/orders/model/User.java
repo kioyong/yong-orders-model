@@ -1,5 +1,7 @@
 package com.yong.orders.model;
 
+import com.yong.orders.annotation.NotNull;
+import com.yong.orders.annotation.Unique;
 import com.yong.orders.model.base.BaseEntity;
 import org.springframework.data.annotation.Id;
 
@@ -12,6 +14,8 @@ public class User extends BaseEntity{
 
     @Id
     private String id;
+
+    @NotNull(message = "User Name Can't be null!")
     private String name;
     private int age;
     private Address address;
