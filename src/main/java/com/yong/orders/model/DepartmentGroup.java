@@ -1,5 +1,7 @@
 package com.yong.orders.model;
 
+import com.yong.orders.annotation.NotNull;
+import com.yong.orders.annotation.Unique;
 import com.yong.orders.model.base.BaseEntity;
 import org.springframework.data.annotation.Id;
 
@@ -10,6 +12,8 @@ public class DepartmentGroup extends BaseEntity {
 
     @Id
     private String id;
+    @NotNull(message = "departmentGroup name can't be null!")
+    @Unique(message = "department Group Name already exists ! Please use other name!")
     private String name;
     private String type;
 
