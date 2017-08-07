@@ -4,10 +4,7 @@ package com.yong.orders.model;
  * Created by yong.a.liang on 6/21/2017.
  */
 public class Address {
-    private String add;
-    private String location;
-    private String country;
-
+    private String add,location,country;
 
     public String getLocation() {
         return location;
