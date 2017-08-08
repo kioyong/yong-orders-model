@@ -29,4 +29,11 @@ public class Address {
     public void setAdd(String add) {
         this.add = add;
     }
+
+    public Address(String add,String location, String country){
+        this.add=add;
+        this.location=location;
+        this.country=country;
+    }
+    public Address(){}
 }

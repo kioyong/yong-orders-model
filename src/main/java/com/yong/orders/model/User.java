@@ -21,6 +21,8 @@ public class User extends BaseEntity{
     private Address address;
     private List<DepartmentGroup> departmentGroupList;
 
+    public User(){}
+
     public String getName() {
         return name;
     }
