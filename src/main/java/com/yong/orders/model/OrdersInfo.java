@@ -1,18 +1,21 @@
 package com.yong.orders.model;
 
+import com.yong.orders.model.base.BaseEntity;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 /**
  * Created by LiangYong on 2017/8/14.
  */
 @Document(collection = "orders")
-public class OrdersInfo {
+public class OrdersInfo extends BaseEntity {
     private String id;
     private String cust_id;
     private String ord_date;
     private String status;
     private long amount;
-    private Name name;
+    private List<Name> name;
 
     @Override
     public String toString() {
@@ -66,11 +69,11 @@ public class OrdersInfo {
         this.amount = amount;
     }
 
-    public Name getName() {
+    public List<Name> getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(List<Name> name) {
         this.name = name;
     }
 }
