@@ -4,14 +4,12 @@ package com.yong.orders.model;
  * Created by yong.a.liang on 6/21/2017.
  */
 public class Address {
-    private String add,location,country;
+    private String add;
+    private String location;
+    private String country;
 
     public String getLocation() {
         return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getCountry() {
@@ -30,10 +28,10 @@ public class Address {
         this.add = add;
     }
 
-    public Address(String add,String location, String country){
-        this.add=add;
-        this.location=location;
-        this.country=country;
-    }
-    public Address(){}
+//    public Address(String add,String location, String country){
+//        this.add=add;
+//        this.location=location;
+//        this.country=country;
+//    }
+//    public Address(){}
 }
