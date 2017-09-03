@@ -12,7 +12,17 @@ public class Person {
     }
     private String namue,emailAddress;
     private LocalDate birthday;
+    private int Age;
     private Sex gender;
+
+
+    public int getAge() {
+        return Age;
+    }
+
+    public void setAge(int age) {
+        Age = age;
+    }
 
     public String getNamue() {
         return namue;
@@ -49,15 +59,18 @@ public class Person {
 
     }
 
+
     @Override
     public String toString() {
         return "Person{" +
                 "namue='" + namue + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", birthday=" + birthday +
+                ", Age=" + Age +
                 ", gender=" + gender +
                 '}';
     }
+
     public Person(){}
 
 }

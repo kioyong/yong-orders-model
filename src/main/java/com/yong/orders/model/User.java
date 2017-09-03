@@ -23,6 +23,11 @@ public class User extends BaseEntity{
 
     public User(){}
 
+    public User(int age,String name){
+        this.age=age;
+        this.name=name;
+    }
+
     public String getName() {
         return name;
     }
