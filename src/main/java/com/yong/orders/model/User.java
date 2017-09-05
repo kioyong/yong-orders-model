@@ -13,6 +13,8 @@ import java.util.List;
  */
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User extends BaseEntity{
 
     @Id
