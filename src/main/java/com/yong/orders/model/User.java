@@ -3,6 +3,7 @@ package com.yong.orders.model;
 import com.yong.orders.annotation.NotNull;
 import com.yong.orders.annotation.Unique;
 import com.yong.orders.model.base.BaseEntity;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 /**
  * Created by yong.a.liang on 6/20/2017.
  */
+@Data
+@Builder
 public class User extends BaseEntity{
 
     @Id
@@ -21,61 +24,4 @@ public class User extends BaseEntity{
     private Address address;
     private List<DepartmentGroup> departmentGroupList;
 
-    public User(){}
-
-    public User(int age,String name){
-        this.age=age;
-        this.name=name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public List<DepartmentGroup> getDepartmentGroup() {
-        return departmentGroupList;
-    }
-
-    public void setDepartmentGroup(List<DepartmentGroup> departmentGroup) {
-        this.departmentGroupList = departmentGroup;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", address=" + address +
-                ", departmentGroup=" + departmentGroupList +
-                '}';
-    }
 }
