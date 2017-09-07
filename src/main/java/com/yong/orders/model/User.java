@@ -15,6 +15,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"name","password"},of = {})
 public class User extends BaseEntity{
 
     @Id

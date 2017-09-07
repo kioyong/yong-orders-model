@@ -5,6 +5,7 @@ import com.google.common.base.Strings;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.yong.orders.common.ResultCode.SUCCESS;
@@ -15,6 +16,7 @@ import static com.yong.orders.common.ResultCode.SUCCESS;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Result<T> {
 
     private int code = SUCCESS;
@@ -35,5 +37,7 @@ public class Result<T> {
         checkArgument(code > 0, "code should be greater than 0");
         return new Result<>(code, message, null);
     }
+
+
     
 }

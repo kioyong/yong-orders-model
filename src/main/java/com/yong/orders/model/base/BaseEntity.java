@@ -10,6 +10,7 @@ import java.util.Date;
 /**
  * Created by yong.a.liang on 6/22/2017.
  */
+@Data
 public class BaseEntity {
     @Version
     protected Long version;
