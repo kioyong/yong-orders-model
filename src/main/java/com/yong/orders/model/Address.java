@@ -8,6 +8,7 @@ import lombok.*;
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Address {
     private String add;
     private String location;

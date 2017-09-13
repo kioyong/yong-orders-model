@@ -21,6 +21,7 @@ public class User extends BaseEntity{
     private String id;
 
     @NotNull(message = "User Name Can't be null!")
+    @Unique(message = "name already exists!")
     private String name;
     private int age;
     private Address address;

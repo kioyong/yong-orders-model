@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.yong.orders.common.ResultCode.FAIL;
 import static com.yong.orders.common.ResultCode.SUCCESS;
 
 /**
@@ -17,7 +18,7 @@ import static com.yong.orders.common.ResultCode.SUCCESS;
 @NoArgsConstructor
 public class Result<T> {
 
-    private int code = SUCCESS;
+    private ResultCode status = SUCCESS;
     private String message;
     private T payload;
 
@@ -30,10 +31,9 @@ public class Result<T> {
         return new Result<>(SUCCESS, null, payload);
     }
 
-    public static <O> Result<O> fail(int code, String message) {
+    public static <O> Result<O> fail(ResultCode code, String message) {
         checkArgument(!Strings.isNullOrEmpty(message), "message should be not empty");
-        checkArgument(code > 0, "code should be greater than 0");
-        return new Result<>(code, message, null);
+        return new Result<>(FAIL, message, null);
     }
-    
+
 }
