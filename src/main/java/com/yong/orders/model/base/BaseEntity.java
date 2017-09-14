@@ -1,10 +1,9 @@
 package com.yong.orders.model.base;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.*;
 
 import java.util.Date;
@@ -13,8 +12,9 @@ import java.util.Date;
 /**
  * Created by yong.a.liang on 6/22/2017.
  */
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BaseEntity {
     @CreatedDate
     protected Date createdDate;

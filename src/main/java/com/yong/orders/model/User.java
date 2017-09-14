@@ -30,7 +30,6 @@ public class User extends BaseEntity{
 
     @DBRef
     private Address address;
-
     private List<DepartmentGroup> departmentGroupList;
 
 }
