@@ -16,9 +16,6 @@ import java.util.Date;
 @Getter
 @Setter
 public class BaseEntity {
-    @Version
-    @Ignore
-    protected Long version;
     @CreatedDate
     protected Date createdDate;
     @LastModifiedDate

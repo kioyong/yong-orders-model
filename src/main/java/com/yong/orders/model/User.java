@@ -5,6 +5,8 @@ import com.yong.orders.annotation.Unique;
 import com.yong.orders.model.base.BaseEntity;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
@@ -15,6 +17,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "user")
 public class User extends BaseEntity{
 
     @Id
@@ -24,7 +27,10 @@ public class User extends BaseEntity{
     @Unique(message = "name already exists!")
     private String name;
     private int age;
+
+    @DBRef
     private Address address;
+
     private List<DepartmentGroup> departmentGroupList;
 
 }
